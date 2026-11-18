@@ -1,0 +1,286 @@
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 28px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #263247;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background: #2563eb;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.brand h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px;
+  margin: 0;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.environment-label,
+.device-id {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #93c5fd;
+  background: #172b49;
+  padding: 9px 12px;
+  border-radius: 6px;
+}
+
+.welcome-section {
+  margin: 65px 0 32px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #60a5fa;
+}
+
+.welcome-section h2,
+.panel-heading h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 27px;
+  margin: 10px 0;
+}
+
+.welcome-section > p:last-child {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.connection-panel {
+  max-width: 650px;
+  background: #111c30;
+  border: 1px solid #263750;
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.panel-heading h2 {
+  font-size: 21px;
+}
+
+.panel-heading .eyebrow {
+  margin: 0;
+}
+
+.connection-panel label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.connection-panel input {
+  width: 100%;
+  padding: 14px;
+  color: white;
+  background: #0b1120;
+  border: 1px solid #34445e;
+  border-radius: 8px;
+  outline: none;
+}
+
+.connection-panel input:focus {
+  border-color: #3b82f6;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+.button-group button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.button-group .disconnect-button {
+  background: #263750;
+}
+
+.button-group .disconnect-button:hover:not(:disabled) {
+  background: #374b68;
+}
+
+.status-section {
+  border-top: 1px solid #263750;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.status-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  padding: 13px;
+  border-radius: 8px;
+  background: #1a293e;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+.success .status-dot {
+  background: #22c55e;
+}
+
+.warning .status-dot {
+  background: #f59e0b;
+}
+
+.error .status-dot {
+  background: #ef4444;
+}
+
+.success {
+  color: #86efac;
+}
+
+.warning {
+  color: #fcd34d;
+}
+
+.error {
+  color: #fca5a5;
+}
+
+footer {
+  margin-top: 55px;
+  color: #64748b;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 24px 16px;
+  }
+
+  .environment-label {
+    display: none;
+  }
+
+  .connection-panel {
+    padding: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}
+
+
+.history-panel {
+  margin-top: 24px;
+  max-width: 650px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px;
+  background: #0b1120;
+  border: 1px solid #263750;
+  border-radius: 8px;
+}
+
+.history-item p {
+  margin: 6px 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.history-item small {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.history-status {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.history-status.connected {
+  color: #86efac;
+}
+
+.history-status.unreachable {
+  color: #fcd34d;
+}
+
+.history-status.invalid {
+  color: #fca5a5;
+}
+
+.database-error {
+  max-width: 650px;
+  margin-top: 16px;
+  color: #fca5a5;
+  font-size: 13px;
+}
+
+.history-panel > p {
+  color: #94a3b8;
+  font-size: 13px;
+}
